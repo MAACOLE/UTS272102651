@@ -1,0 +1,6 @@
+<app-header (toggle)="sidebarOpen.set(!sidebarOpen())"></app-header>
+<app-sidebar [open]="sidebarOpen()" (close)="sidebarOpen.set(false)"></app-sidebar>
+<main class="app-main">
+  <app-profile></app-profile>
+</main>
+<app-footer></app-footer>

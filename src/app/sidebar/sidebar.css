@@ -1,0 +1,31 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: #343a40;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+}
+.sidebar.open { transform: translateX(0); }
+.sidebar-brand {
+  color: #fff;
+  font-size: 1.25rem;
+  padding: 1rem;
+  border-bottom: 1px solid #4b545c;
+}
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
